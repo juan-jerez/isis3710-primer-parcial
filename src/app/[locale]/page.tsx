@@ -1,7 +1,14 @@
 import {useTranslations} from 'next-intl';
+import Link from 'next/link';
 export default function Home() {
   const t = useTranslations('HomePage');
   return (
-    <h1>{t('title')}</h1>
+    <div className ="bg-[#11463B] text-white p-4 text-center">
+      <Link href="/pokemon">
+        <button style={{ padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}>
+          Ir a Pokemons
+        </button>
+      </Link>
+    </div>
   );
 }
